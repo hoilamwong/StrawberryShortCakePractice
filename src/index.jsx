@@ -9,7 +9,7 @@ const root = ReactDOM.createRoot(document.querySelector('#root'))
 
 root.render(
     <>
-        <h1> Nom Nom </h1>
+        <h1> Nom Nom Nom </h1>
         <h2> I love Strawberry Shortcakes ! </h2>
         <EatenPercentage/>
         <Canvas
