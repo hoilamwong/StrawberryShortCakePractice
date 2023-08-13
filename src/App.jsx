@@ -15,8 +15,8 @@ export default function App ()
     return <>
         <OrbitControls makeDefault />   
 
-        <directionalLight castShadow position={ [ 1, 3, 2 ] } intensity={ 0.8 } shadow-normalBias={ 0.04}/>
-        <ambientLight intensity={ 0.45 } />    
+        <directionalLight castShadow position={ [ 1, 3, 2 ] } intensity={ 1 } shadow-normalBias={ 0.04}/>
+        <ambientLight intensity={ 0.3 } />    
 
         <group ref={ testRef }>
             <StrawberryShortCake receiveShadow position-y={ 0.4 } scale={ 2.5 }/>
