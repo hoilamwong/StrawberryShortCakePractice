@@ -1,11 +1,25 @@
-import EatenPercentage from "./EatenPercentage.jsx";
-// import StrawberryShortCake from "./StrawberryShortCake.jsx"
+import { useThree, extend, useFrame } from '@react-three/fiber'
+import { useRef } from 'react'
+import { OrbitControls } from '@react-three/drei'
+import StrawberryShortCake from "./StrawberryShortCake.jsx"
 
 export default function App ()
 {
+    const testRef = useRef()
+    console.log(testRef);
+
+    useFrame((state, delta) => 
+    {
+        testRef.current.rotation.y += delta*0.4
+    })
     return <>
-        <h1> Nom Nom </h1>
-        <h2> I love Strawberry Shortcakes ! </h2>
-        <EatenPercentage/>
+        <OrbitControls makeDefault />   
+
+        <directionalLight castShadow position={ [ 1, 3, 2 ] } intensity={ 0.8 } shadow-normalBias={ 0.04}/>
+        <ambientLight intensity={ 0.45 } />    
+
+        <group ref={ testRef }>
+            <StrawberryShortCake receiveShadow position-y={ 0.4 } scale={ 2.5 }/>
+        </group>
     </>
 }
