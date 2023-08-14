@@ -13,6 +13,7 @@ root.render(
         <h2> I love Strawberry Shortcakes ! </h2>
         <EatenPercentage/>
         <Canvas
+            flat
             shadows
             camera={ {
                 fov: 45,

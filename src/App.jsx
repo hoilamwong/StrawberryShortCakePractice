@@ -10,12 +10,14 @@ export default function App ()
 
     useFrame((state, delta) => 
     {
-        testRef.current.rotation.y += delta*0.4
+        testRef.current.rotation.y += delta * 0.4
     })
-    return <>
-        <OrbitControls makeDefault />   
 
-        <directionalLight castShadow position={ [ 1, 3, 2 ] } intensity={ 1 } shadow-normalBias={ 0.04}/>
+
+    return <>
+        {/* <OrbitControls makeDefault />    */}
+
+        <directionalLight castShadow position={ [ 1, 3, 2 ] } intensity={ 1 } shadow-normalBias={ 2.5 }/>
         <ambientLight intensity={ 0.3 } />    
 
         <group ref={ testRef }>
